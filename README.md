@@ -1,7 +1,7 @@
 ##personal vim/zsh/bash configs
 
 ##Installation
-0. git clone https://github.com/hewigovens/vim-config ~/.vim
+0. git clone https://github.com/thinkluffy/vim-config ~/.vim
 1. cd scripts
 1. ./install_submodules.sh
 2. ./install_configs.sh
