@@ -29,7 +29,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python brew ruby node pod docker gem osx thefuck tmux sudo rsync)
+plugins=(git python brew ruby node pod docker gem osx sudo rsync)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,8 +40,9 @@ fi
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-# export PROMPT='%{$fg[green]%}%n@$IPADDR$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
-# % %# %{$reset_color%}'
+export PROMPT='
+%{$fg[green]%}%n@SLPC$reset_color%} %{$fg_bold[red]%}➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%d %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} 
+% %# %{$reset_color%}'
 # e.g. hewig@192.168.17.242 ➜  /Users/hewig/.vim/ git:(master)
 
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
@@ -52,10 +53,10 @@ export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
 export GOPATH=~/workspace/go
 export REACT_EDITOR=code
 
-eval $(thefuck --alias)
-eval "$(rbenv init -)"
+# eval $(thefuck --alias)
+# eval "$(rbenv init -)"
 # eval "$(docker-machine env default)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 . <(npm completion)
-ssh-add -K
+# ssh-add -K
